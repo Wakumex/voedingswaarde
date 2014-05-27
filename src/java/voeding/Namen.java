@@ -25,32 +25,37 @@ public class Namen {
 
     public void voegToe()
     {
-        array.add(new Eigenschappen("Ei", "32,0 gram.", "0,0,", "16,2 gram", "0,0", "dunno lol"));
-        array.add(new Eigenschappen("Brood", "niet zoveel", "0,0,", "16,2 gram", "0,0", "dunno lol"));
-        array.add(new Eigenschappen("Slappy ho burger", "veel niggu", "0,0,", "16,2 gram", "0,0", "dunno lol"));
+        array.add(new Eigenschappen("ei.jpg", "Ei", "32,0 gram.", "0,0 gram.", "16,2 gram.", "0,0 gram.", "nvt"));
+        array.add(new Eigenschappen("brood.jpg", "Brood", "3,7 gram.", "45,6 gram.", "7 gram.", "5,7 gram.", "1,6 mg."));
+        array.add(new Eigenschappen("biefstuk.jpg","Biefstuk", "3,5 gram.", "0,0 gram.", "23,8 gram.", "0,0 gram.", "20 mg."));
     }
      public String getResult(int i)
     {
         result += "<form>"
+                + "<div class=\"namen\">"
                 + "<label><h1>" + array.get(i).getNaam()+ "</h1></label><br>"
+                + "</div>"
                 + "</form>";
         return result;
     }
-
-    public String genereerPagina()
-    {
-
-        for(Eigenschappen eigenschappen : array)
-        {
+     
+                Eigenschappen eigenschappen;
             
+    public String genereerPagina(int i)
+    {
            html +="<form>"
-                + "<label for=\"vetten\"> Vetten: "+ eigenschappen.getVetten() + "</label><br />"
-                + "<label for=\"koolhydraten\">  Koolhydraten: " + eigenschappen.getKoolhydraten()  + "</label><br />"
-                + "<label for=\"eiwitten\">     Eiwitten: "    + eigenschappen.getEiwitten() + "</label> <br />"
-                + "<label for=\"vezels\">   Vezels: " + eigenschappen.getVezels() + "</label><br />" 
-                + "<label for=\"zout\">   Zout: " + eigenschappen.getZout() + "</label>"
+                + "<div class=\"afbeelding\">"
+                + "<img src=" + array.get(i).getFoto() + ">"
+                + "</div>"
+                + "<div class=\"gegevens\">"
+                + "<label for=\"vetten\"> Vetten: " + array.get(i).getVetten() + "</label><br />"
+                + "<label for=\"koolhydraten\">  Koolhydraten: " + array.get(i).getKoolhydraten()  + "</label><br />"
+                + "<label for=\"eiwitten\">     Eiwitten: "    + array.get(i).getEiwitten() + "</label> <br />"
+                + "<label for=\"vezels\">   Vezels: " + array.get(i).getVezels() + "</label><br />" 
+                + "<label for=\"zout\">   Zout: " + array.get(i).getZout() + "</label>"
+                + "</div>"
                 + "</form>";
-        }
+        
         return html;
     }
         public String lijst()

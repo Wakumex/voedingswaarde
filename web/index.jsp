@@ -24,33 +24,38 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <link href="index.css" rel="stylesheet" type="type/css" media="screen">
+         <link href="voedingswaardecss.css" rel="stylesheet" type="type/css" media="screen">
         <title>Voedingswaarde</title>
     </head>
     <body>
-
+            
         <div id="wrapper">
-              <div class="eigenschappen">
+
+            <div class="eigenschappen">
                   
-            <form action="#" method="get">
-            <select name = "pizza">
+          <form action="#" method="post">
+              <select name = "pizza">
             <option value ="0" selected disabled="">Selecteer product</option>
-            <option value="0">Ei</option>
-            <option value="1">Brood</option>
-            <option value="2">Slappy ho burger</option>
-            </select>              
-            <input type="submit" name="submit" value="verzend"><br>
-
-
+            <option value="0">Ei (100 gram)</option>
+            <option value="1">Brood (100 gram)</option>
+            <option value="2">Biefstuk (100 gram)</option>
+            </select> 
+            <input type="submit" name="submit" value="Verzend!"><br>
+            </div>
+            
+ 
             <%             if(request.getParameter("submit") != null ) { %>
-            <%= namen.getResult(i) %>
-            <%= namen.genereerPagina() %>
+            <%= namen.getResult(i) %>           
+            <%= namen.genereerPagina(i) %>
+            
             
             <% } %>
 
+          </div>
+
             </form>
-        </div>
-        </div>
+
+
             
     </body>
 </html>

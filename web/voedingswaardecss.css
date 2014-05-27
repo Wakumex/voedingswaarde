@@ -7,12 +7,36 @@ and open the template in the editor.
     Created on : 26-mei-2014, 20:29:20
     Author     : kevin
 */
-
+*{
+    font-family: arial;
+}
 #wrapper {
     width: 600px;
     height: 700px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
-    border: solid black;
+    border: 1px solid;
 }
+
+.gegevens {
+    padding-left: 100px;
+    
+}
+
+.namen {
+    text-align: center;
+
+}
+.afbeelding img{
+    width: 400px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.eigenschappen{
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+
